@@ -3,7 +3,8 @@ ARG JUPYTERHUB_VERSION=1.4.2
 RUN pip3 install --no-cache \
     jupyterhub==$JUPYTERHUB_VERSION
 
-ADD welcome.md /home/jovyan/work
+# No Markdown welcome for now, as Jupyter doesn't display it nicely
+# ADD welcome.md /home/jovyan/work
 ADD welcome.ipynb /home/jovyan/work
 
 USER root
